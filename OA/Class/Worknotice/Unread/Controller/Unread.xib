@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Unread">
+            <connections>
+                <outlet property="MyTable" destination="r4h-au-hI1" id="RIb-gx-f5f"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="搜索标题" translatesAutoresizingMaskIntoConstraints="NO" id="eot-p4-ndN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="kjf-FI-2Zi"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4h-au-hI1">
+                    <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tgy-Df-HdX"/>
+                        <outlet property="delegate" destination="-1" id="DeI-8W-reI"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eot-p4-ndN" secondAttribute="trailing" id="4Ax-3R-0dL"/>
+                <constraint firstItem="eot-p4-ndN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Aut-zk-8d8"/>
+                <constraint firstItem="eot-p4-ndN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QJK-1h-pga"/>
+                <constraint firstAttribute="bottom" secondItem="r4h-au-hI1" secondAttribute="bottom" id="QWZ-m5-Xlk"/>
+                <constraint firstItem="r4h-au-hI1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UrC-zS-xKx"/>
+                <constraint firstAttribute="trailing" secondItem="r4h-au-hI1" secondAttribute="trailing" id="iZT-FD-hGN"/>
+                <constraint firstItem="r4h-au-hI1" firstAttribute="top" secondItem="eot-p4-ndN" secondAttribute="bottom" id="jU2-6W-VTB"/>
+            </constraints>
+            <point key="canvasLocation" x="-64" y="46"/>
+        </view>
+    </objects>
+</document>
